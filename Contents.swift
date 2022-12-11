@@ -235,6 +235,8 @@ enum Country {
 }
 var paisesBajos = Country.PaisesBajos
 var senegal = Country.Senegal
+var belgica = Country.Belgica
+var canada = Country.Canada
 
 class WorldCupTeam {
     
@@ -252,22 +254,7 @@ class WorldCupTeam {
     }
 }
 
-class Games {
-  var team1: Team
-  var team2: Team
-  var result: String
 
-  init(team1: Team, team2: Team, result: String) {
-      self.team1 = team1
-      self.team2 = team2
-      self.result = result
-  }
-}
-
-var teams = [
-    Team (country:paisesBajos , players: [member1, member2]),
-    Team( country:senegal, players: [member3, member4])
-]
 
 
 
@@ -275,9 +262,42 @@ var teams = [
  MARK: 7.- Crear una clase para representar los partidos entre selecciones, deberá contener atributos como equipo local, visitante y resultado como mínimo. Generar una lista aleatoria de partidos entre la lista de selecciones anteriores y hacer un print de este estilo por partido:
  Partido: España 3 - 1 Brasil
  
+
  
  */
 
+class Games {
+  var teamWinner: Team
+  var team2: Team
+  var resultWinner: Int
+  var result2: Int
+
+    init(teamWinner: Team, team2: Team, resultWinner: Int, result2: Int) {
+      self.teamWinner = teamWinner
+      self.team2 = team2
+      self.resultWinner = resultWinner
+      self.result2 = 0
+  }
+    
+}
+
+var teams = [
+    Team (country:paisesBajos , players: [member1, member2]),
+    Team( country:senegal, players: [member3, member4]),
+    Team (country:belgica , players: [member1, member2]),
+    Team( country:canada, players: [member3, member4])
+]
+
+
+var setTeamsGames = [Games]()
+// To do: let rand = Int(arc4random_uniform(4)) // numero random en base a 14
+//generate random gmaes with teams. Display the result if restultWinner>result2
+/*
+for setTeamsGames in setTeamsGames {
+    print("Game: \(setTeamsGames.teamWinner.country): \(setTeamsGames.resultWinner)
+ vs \(setTeamsGames.team2.country): \(setTeamsGames.result2)")
+}
+*/
 
 
 
@@ -286,16 +306,18 @@ var teams = [
  
  */
 
-
+// To do
 /*
  
  MARK: 9.- Para añadir a cada Grupo los puntos de cada selección habrá que contabilizar las victorias con 3 puntos, empates con 1 y derrotas con 0. Añadir una función en la clase Grupo que le pasemos una selección y nos devuelva sus puntos.*/
 
-
+//To do
 /*
  MARK: 10.- Generar los partidos del Mundial en cada grupo y calcular las dos primeras selecciones de cada grupo y hacer un print con los clasificados.
  
  */
+
+// To do
 
 
 
