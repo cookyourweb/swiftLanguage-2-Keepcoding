@@ -162,6 +162,16 @@ MARK: 5.- Crear una clase, con los atributos necesarios, para representar a los 
                              position: PlayerPosition.Delantero
         )
         print(member2.member)
+     
+     class Team {
+    var name: String
+    var player: [Member]
+
+  init(name: String,  players: [Member]) {
+      self.name = name
+      self.player = players
+  }
+}
         
         /*
          MARK: 6.- Crear las clases necesarias, con los atributos mínimos, para representar las selecciones de fútbol del Mundial de fútbol 2022, por ejemplo: Una clase que represente el Mundial, necesitaremos que contenga un listado de Selecciones, cada selección tendrá sus atributos, como nombre, país, jugadores, seleccionador, etc.
@@ -185,17 +195,33 @@ MARK: 5.- Crear una clase, con los atributos necesarios, para representar a los 
             case GroupF
            
         }
-        enum Country {
-            case PaisesBajos
-            case Senegal
-            case Ecuador
-            case Catar
-            case Inglaterra
-            case EstadosUnidos
-            case Iran
-            case Gales
-     
-        }
+       enum Country {
+    case PaisesBajos
+    case Senegal
+    case Ecuador
+    case Catar
+    case Inglaterra
+    case EstadosUnidos
+    case Iran
+    case Gales
+    case Argentina
+    case Polonia
+    case Mexico
+    case ArabiaSaudi
+    case Francia
+    case Australia
+    case Tunez
+    case Dinamarca
+    case Japon
+    case España
+    case Tunez
+    case CostaRica
+    case Marruecos
+    case Croacia
+    case Belgica
+    case Canada
+
+}
         
         class WorldCupTeam {
             
